@@ -69,7 +69,7 @@ WSGI_APPLICATION = 'it-cheb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'it-cheb1',
+        'NAME': 'it-cheb',
         'USER': 'postgres',
         'PASSWORD': '12345',
         'HOST': '127.0.0.1',
