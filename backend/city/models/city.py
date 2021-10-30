@@ -2,10 +2,10 @@ from django.db import models
 
 
 class City(models.Model):
-    city = models.CharField(max_length=25)
-    district = models.CharField(max_length=25)
-    street = models.CharField(max_length=25)
-    house = models.CharField(max_length=25)
+    city = models.CharField(max_length=100, verbose_name='Город')
+    district = models.CharField(max_length=100, verbose_name='Район')
+    street = models.CharField(max_length=100, verbose_name='Улица')
+    house = models.CharField(max_length=100, verbose_name='Дом')
 
     def __str__(self):
-        return self.city
+        return self.street
