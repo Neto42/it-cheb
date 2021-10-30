@@ -13,3 +13,4 @@ class RezultSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rezult
         fields = '__all__'
+
