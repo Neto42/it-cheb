@@ -5,3 +5,4 @@ class City(models.Model):
     district = models.CharField(max_length=50)
     street = models.CharField(max_length=50)
     house = models.CharField(max_length=10)
+
