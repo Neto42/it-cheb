@@ -11,7 +11,9 @@
     "bulma": "^0.9.3",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
+    "vue-good-table": "^2.21.11",
     "vue-router": "^4.0.0-0",
+    "vue-yandex-maps": "^0.11.0",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
