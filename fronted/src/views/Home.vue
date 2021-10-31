@@ -7,10 +7,9 @@
         @map-was-initialized="mapInit"
     >
       <ymap-marker
-          v-for="billboard in allResults"
+          v-for="(billboard, index) in allResults"
           marker-type="placemark"
           :balloon-template="mapBalloon(billboard)"
-          :coords="billboard.coords"
           :marker-id="index"
           :icon="{ color: 'blue' }"
           :key="billboard.id"
@@ -20,7 +19,7 @@
 </template>
 
 <script>
-/* eslint-disable */
+//СДЕЛАТЬ МАРКЕРЫ
 import {yandexMap, ymapMarker} from "vue-yandex-maps";
 import {mapActions, mapGetters} from "vuex";
 
@@ -45,28 +44,6 @@ export default {
   methods: {
     ...mapActions(['results']),
 
-    mapInit(map) {
-      this.mapLoaded = true;
-      this.map = map;
-      addresses.map(address => {
-            ymaps.geocode(address.address, {
-        results: 1
-    }).then(function (res) {
-            // Выбираем первый результат геокодирования.
-            var firstGeoObject = res.geoObjects.get(0);
-                // Координаты геообъекта.
-                // Область видимости геообъекта.
-
-            firstGeoObject.options.set('preset', 'islands#darkOrangeDotIconWithCaption');
-            // Получаем строку с адресом и выводим в иконке геообъекта.
-            firstGeoObject.properties.set('iconCaption', firstGeoObject.getAddressLine());
-
-            // Добавляем первый найденный геообъект на карту.
-            map.geoObjects.add(firstGeoObject);
-            // Масштабируем карту на область видимости геообъекта.
-        });
-      })
-    },
     mapBalloon(billboard) {
       return `
       <div><h1>${billboard.id}</h1>
