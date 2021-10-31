@@ -13,7 +13,7 @@ Vue - 4.5.15.
 
 Установка:
 
-git clone https://github.com/Neto42/izi_four_lemooon.git;
+git clone https://github.com/Neto42/it-cheb.git
 python -m venv venv;
 cd venv\Scripts\activate;
 
